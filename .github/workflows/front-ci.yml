@@ -29,6 +29,6 @@ jobs:
       id: date
       run: echo "::set-output name=date::$(date +'%Y-%m-%d--%M-%S')"
     - name: Build the Docker image # push The image to the docker hub
-      run: docker build ./front --file Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/orderbird-ecommerce:${{ steps.date.outputs.date }}
+      run: docker build . --file front/Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/orderbird-ecommerce:${{ steps.date.outputs.date }}
     - name: Docker Push
       run: docker push ${{ secrets.DOCKER_USERNAME }}/orderbird-ecommerce:${{ steps.date.outputs.date }}
