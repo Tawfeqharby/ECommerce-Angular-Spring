@@ -54,7 +54,7 @@ jobs:
         run: docker push ${{ secrets.DOCKER_USERNAME }}/orderbird-backend:${{ steps.date.outputs.date }}
       
       - name: Tag the Docker image with latest 
-        run: docker tag ${{ secrets.DOCKER_USERNAME }}/orderbird-backend:latest
+        run: docker tag ${{ secrets.DOCKER_USERNAME }}/orderbird-backend:${{ steps.date.outputs.date }} ${{ secrets.DOCKER_USERNAME }}/orderbird-backend:latest 
      
       - name: Docker Push with latest
         run: docker push ${{ secrets.DOCKER_USERNAME }}/orderbird-backend:latest  
