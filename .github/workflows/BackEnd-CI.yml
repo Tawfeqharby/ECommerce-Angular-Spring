@@ -1,0 +1,38 @@
+name: BackEnd CI workflow
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+    build: 
+      runs-on: ubuntu-latest
+      
+      steps:
+    
+      - name: Checkout the master branch
+        uses: actions/checkout@v1
+      
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+          
+      - name: Build with Maven
+        run: mvn -B package --file ./ecommercebackend/pom.xml -DskipTests
+        
+      - name: list all the directory 
+        run: ls -a 
+        
+      - name: list the terget folder
+        run: |
+          cd ./ecommercebackend/target 
+          ls -a
+        
+          
+ 
+
+          
+   
+

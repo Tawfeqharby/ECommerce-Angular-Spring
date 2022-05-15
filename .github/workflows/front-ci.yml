@@ -1,0 +1,34 @@
+name: Front-END  CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+# Env variable
+env:
+  DOCKER_USER: ${{ secrets.DOCKER_USERNAME }}
+  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+  
+  
+jobs:
+ 
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2  
+    - name: Log in to Docker Hub
+      uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+      with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          
+    - name: Get current date # get the date of the build
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d--%M-%S')"
+    - name: Build the Docker image # push The image to the docker hub
+      run: docker build . --file ./frontend/Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/orderbird-ecommerce:${{ steps.date.outputs.date }}
+    - name: Docker Push
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/orderbird-ecommerce:${{ steps.date.outputs.date }}
