@@ -21,7 +21,7 @@ jobs:
           java-version: 1.8
           
       - name: Build with Maven
-        run: mvn -B package --file ./ecommercebackend/pom.xml
+        run: mvn -B package --file ./ecommercebackend/pom.xml -DskipTests
         
       - name: list all the directory 
         run: ls -a 
