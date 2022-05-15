@@ -27,7 +27,7 @@ jobs:
         
       - name: list the terget folder
         run: |
-          cd target 
+          cd ./ecommercebackend/target 
           ls -a
         
           
