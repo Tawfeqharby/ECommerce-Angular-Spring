@@ -10,9 +10,9 @@ https://github.com/notakamihe/ECommerce-Angular-Spring
 3- The CI workflow has 2 CI yaml files, the first one is for the front-end and the second one is for the back-end.
 4- Back-end CI workflow is :
  *  A- trigger the push on master.
- *   B- Set environment variables.
+ *  B- Set environment variables.
  *  C-  Run on Ubuntu agent.
- *   D- Then steps : 
+ *  D- Then steps : 
        *  1- checkout the reop.
        *  2- setup JDK 8
        *  3- Build the app using maven.
@@ -24,15 +24,15 @@ https://github.com/notakamihe/ECommerce-Angular-Spring
    
  5- Front-end CI workflow is:
  *  A- trigger the push on master.
- *   B- Set environment variables.
+ *  B- Set environment variables.
  *  C-  Run on Ubuntu agent.
- *   D- Then steps : 
+ *  D- Then steps : 
        *  1- checkout the reop.
        *  4- build the docker image.
        *  5- login to Docker hub.
        *  6- push the images to your repository with the date tag.
-       * 7- Tag the latest for the image.
-       * 8- push the latest tagged image to the repo.
+       *  7- Tag the latest for the image.
+       *  8- push the latest tagged image to the repo.
 
 
 ## For testing the project:
@@ -43,8 +43,11 @@ https://github.com/notakamihe/ECommerce-Angular-Spring
 * Back-End.
 * Front-End.
 * Database.
-4- Connect to the serverip:3306 to excute the ecommerce.sql file which located in the repo to the create the db.
 
-4- Open your Browser on http request to the server. 
-5- Here is the link for the server that I have installed to apply my solution.
+5- Connect to the serverip:3306 to excute the ecommerce.sql file which located in the repo to the create the db.
+
+6- Open your Browser on http request to the server. 
+5- Here is the link for the server that I have installed to test my solution.
  [http://mytesting.eastus.cloudapp.azure.com/]
+ 
+ Thanks so much for your time.
