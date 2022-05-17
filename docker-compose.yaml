@@ -1,0 +1,29 @@
+version: '3'
+services:
+  orderbird-front:
+    container_name: orderbird-front
+    image: tawfeqharby/orderbird-frontend:latest
+    restart: always
+    
+    ports:
+      - "80:80"
+
+  orderbird-backend:
+    image: tawfeqharby/orderbird-backend:latest
+    container_name: orderbird-backend
+    restart: always
+    ports:
+      - "8080:8080"
+
+ mysql:
+    image: mysql
+    container_name: mydb
+    ports:
+      - 3306:3306
+    volumes:
+      - ~/apps/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_USER=db_user
+      - MYSQL_DATABASE=ecommerce
