@@ -15,7 +15,7 @@ services:
     ports:
       - "8080:8080"
 
- mysql:
+  mysql:
     image: mysql
     container_name: mydb
     ports:
