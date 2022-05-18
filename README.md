@@ -1,3 +1,4 @@
+
 # ECommerce Web Application using Angular and Java Spring Boot
 
 ## Description:
@@ -44,10 +45,16 @@ https://github.com/notakamihe/ECommerce-Angular-Spring
 * Front-End.
 * Database.
 
-5- Connect to the serverip:3306 to excute the ecommerce.sql file which located in the repo to the create the db.
+4- Open your Browser and the server DNS name or IP address it will open the Front-End.
+   For example http://localhost
+5- Open your Browser and the server DNS name or IP address with port 8080 it will open the Back-End.
+   For example http://localhost:8080
+6- Here is the link for the server that I have installed to test my solution.
+ [http://mydemotask.eastus.cloudapp.azure.com]
+ [http://mydemotask.eastus.cloudapp.azure.com:8080]
 
-6- Open your Browser on http request to the server. 
-5- Here is the link for the server that I have installed to test my solution.
- [http://mytesting.eastus.cloudapp.azure.com/]
+ 7- It is working now but you can't add or retrieve data because it needs an  authentication token to be installed in the Front-end to connect the 
+
+ 
  
  Thanks so much for your time.
