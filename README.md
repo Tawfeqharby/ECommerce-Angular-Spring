@@ -49,6 +49,7 @@ https://github.com/notakamihe/ECommerce-Angular-Spring
    For example http://localhost
 5- Open your Browser and the server DNS name or IP address with port 8080 it will open the Back-End.
    For example http://localhost:8080
+   
 6- Here is the link for the server that I have installed to test my solution.
  [http://mydemotask.eastus.cloudapp.azure.com]
  [http://mydemotask.eastus.cloudapp.azure.com:8080]
