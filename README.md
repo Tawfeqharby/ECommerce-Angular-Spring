@@ -45,7 +45,7 @@ https://github.com/notakamihe/ECommerce-Angular-Spring
 
 2- Run the following command: 
   ``` docker-compose up -d ```
-  
+
 3- The composer will create 3 docker container 
 * Back-End.
 * Front-End.
@@ -60,8 +60,10 @@ https://github.com/notakamihe/ECommerce-Angular-Spring
  [http://mydemotask.eastus.cloudapp.azure.com]
  [http://mydemotask.eastus.cloudapp.azure.com:8080]
 
- 7- It is working now but you can't add or retrieve data because it needs an  authentication token to be installed in the Front-end to connect the 
+ 7- It is working now but you can't add or retrieve data because it needs an  authentication token to be installed in the Front-end to connect the Back-End.
 
- 
+ 8- For clear everything 
+ ``` docker-compose down --rmi all ``` 
+ It will delete the containers and the images. 
  
  Thanks so much for your time.
