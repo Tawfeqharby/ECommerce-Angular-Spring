@@ -10,8 +10,8 @@ services:
       - ~/apps/mysql:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=P@ssw0rd
-      - MYSQL_PASSWORD=root
-      - MYSQL_USER=root 
+      - MYSQL_PASSWORD=pass
+      - MYSQL_USER=dbuser 
       - MYSQL_DATABASE=ecommerce
   orderbird-front:
     container_name: orderbird-front
