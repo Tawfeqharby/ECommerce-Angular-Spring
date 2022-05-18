@@ -14,6 +14,6 @@ RUN npm run-script build
 # Run in NGINX #
 FROM nginx:latest
 COPY --from=node /usr/local/app/dist/frontend /usr/share/nginx/html
-COPY --from=node /usr/local/app/ngnix.conf /etc/nginx/nginx.conf
+COPY --from=node /usr/local/app/ngnix.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
