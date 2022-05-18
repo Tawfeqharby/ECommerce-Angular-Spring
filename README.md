@@ -42,8 +42,10 @@ https://github.com/notakamihe/ECommerce-Angular-Spring
 
 ## For testing the project:
 1- Copy the docker-compose file which located in the repo to your server.
+
 2- Run the following command: 
   ``` docker-compose up -d ```
+  
 3- The composer will create 3 docker container 
 * Back-End.
 * Front-End.
