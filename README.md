@@ -5,10 +5,14 @@
 The project is open source web app on GitHub and this is the original repo:
 https://github.com/notakamihe/ECommerce-Angular-Spring 
 ### Steps to run it using docker
+
 1- Create the docker files for the front-end and back-end.
+
 2- create CI using GitHub actions and you will find the work flow on folder 
 [.github/workflows](https://github.com/Tawfeqharby/ECommerce-Angular-Spring/tree/master/.github/workflows "This path skips through empty directories") 
+
 3- The CI workflow has 2 CI yaml files, the first one is for the front-end and the second one is for the back-end.
+
 4- Back-end CI workflow is :
  *  A- trigger the push on master.
  *  B- Set environment variables.
@@ -49,7 +53,7 @@ https://github.com/notakamihe/ECommerce-Angular-Spring
    For example http://localhost
 5- Open your Browser and the server DNS name or IP address with port 8080 it will open the Back-End.
    For example http://localhost:8080
-   
+
 6- Here is the link for the server that I have installed to test my solution.
  [http://mydemotask.eastus.cloudapp.azure.com]
  [http://mydemotask.eastus.cloudapp.azure.com:8080]
