@@ -1,7 +1,5 @@
-### AevaPay Project
-
-## First phase 
-
+# AevaPay
+## First Phase
 1- First to create your docker files will hte following:
 
     # Builing the base image 
@@ -110,8 +108,7 @@ So the Pipeline is :
 5- You can use it after using docker compose or in Kubernetes using Deployment file. or We can package it to Helm charts and install the chart in our Kubernetes cluster.
 
 
-## Second phase ##
-
+### Second phase
 Design our infrastructure that host the application:
 1- I will choose EKS service in Amazon.
     - you will find the design in the the same git repo.
