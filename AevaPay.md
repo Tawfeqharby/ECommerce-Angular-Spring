@@ -113,6 +113,7 @@ So the Pipeline is :
 
 
 *** Second phase ***
+
 Design our infrastructure that host the application:
 1- I will choose EKS service in Amazon.
     - you will find the design in the the same git repo.
