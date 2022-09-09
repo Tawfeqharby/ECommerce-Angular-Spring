@@ -101,27 +101,28 @@ jobs:
    ```
 
 So the Pipeline is :
-1- make checkout step and based on the Triger that run when push happens  on the branch.
-2- Build the docker image, and inside the docker image we make all the phases to build and test and lint.
-3- we provide which Registry for example Docker Hub with credential.
-4- Push the image in your private registry.
-5- You can use it after using docker compose or in Kubernetes using Deployment file. or We can package it to Helm charts and install the chart in our Kubernetes cluster.
+
+ 1. make checkout step and based on the Triger that run when push happens  on the branch.
+ 2. Build the docker image, and inside the docker image we make all the phases to build and test and lint.
+ 3. we provide which Registry for example Docker Hub with credential.
+ 4. Push the image in your private registry.
+ 5. You can use it after using docker compose or in Kubernetes using Deployment file. or We can package it to Helm charts and install the chart in our Kubernetes cluster.
 
 
 ### Second phase
 Design our infrastructure that host the application:
-1- I will choose EKS service in Amazon.
-    - you will find the design in the the same git repo.
-    - It is EKS design.
- Here is the list of used service:
- 1- EKS service: Managed kubernetes Cluster.
- 2- RDS: for MYSQL database.
- 3- All basic networking in AWS.
- 4- Elastic cashe : for Redis memory database.
- 4- Prometheus and Grafana for monitor our application.
- 5- Inside the cluster we will use 
-     - Nginx Ingress Controller.
-     - Deployments.
-     - Service ClusterIP.
-     - PODs.
-6- We can use ArgoCD for continuous deployment.
+
+ -  I will choose EKS service in Amazon.
+        - you will find the design in the the same git repo.
+        - It is EKS design.  Here is the list of used service: 
+ 
+ 
+ - EKS service: Managed kubernetes Cluster.  2- RDS: for MYSQL database. 
+ -   All basic networking in AWS.  4- Elastic cashe : for Redis memory database. 
+ - Prometheus and Grafana for monitor our application. 
+ -  Inside the cluster we will use 
+ -  Nginx Ingress Controller.
+ -  Deployments.
+ -  Service ClusterIP.
+ -  PODs.
+ -  We can use ArgoCD for continuous deployment.
