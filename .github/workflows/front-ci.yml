@@ -29,12 +29,12 @@ jobs:
       run: echo "::set-output name=date::$(date +'%Y-%m-%d--%H-%S')"
       
     - name: Build the Docker image # push The image to the docker hub
-      run: docker build . --file ./frontend/Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/orderbird-frontend:${{ steps.date.outputs.date }}
+      run: docker build . --file ./frontend/Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/frontend:${{ steps.date.outputs.date }}
     - name: Docker Push
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/orderbird-frontend:${{ steps.date.outputs.date }}
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/frontend:${{ steps.date.outputs.date }}
       
     - name: Tag the Docker image with latest 
-      run: docker tag ${{ secrets.DOCKER_USERNAME }}/orderbird-frontend:${{ steps.date.outputs.date }} ${{ secrets.DOCKER_USERNAME }}/orderbird-frontend:latest 
+      run: docker tag ${{ secrets.DOCKER_USERNAME }}/frontend:${{ steps.date.outputs.date }} ${{ secrets.DOCKER_USERNAME }}/frontend:latest 
      
     - name: Docker Push with latest
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/orderbird-frontend:latest  
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/frontend:latest  
